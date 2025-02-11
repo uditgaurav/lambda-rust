@@ -1,0 +1,6 @@
+#!/bin/sh
+# Set the wrapper script for Lambda execution
+export AWS_LAMBDA_EXEC_WRAPPER=/opt/bin/chaos_wrapper.sh
+
+# Start the Lambda Runtime Interface Emulator (RIE)
+exec /opt/aws-lambda-rie "$@"
